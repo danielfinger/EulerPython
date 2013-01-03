@@ -1,0 +1,17 @@
+squares = 0
+sums = 0
+
+for x in range (1,101):
+    y = x * x
+    squares += y
+    sums += x
+
+print squares
+
+total = sums * sums
+
+print total
+
+answer = total - squares
+
+print "The difference is %i" % (answer)
