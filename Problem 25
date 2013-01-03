@@ -1,0 +1,12 @@
+count = 1
+x = 0
+y = 1
+ans = 0
+while ans == 0:
+    z = x + y       # Each iteration of loop we generate one new element of the sequence.
+    x = y           # If this new element has more than 999 digits, we have the target.
+    y = z
+    count += 1
+    if len(str(z)) > 999 :
+        print count
+        break
