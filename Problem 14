@@ -1,0 +1,16 @@
+ans = 0
+top = 0
+for x in range(2, 1000000):
+    current = x
+    counter = 0
+    while current > 1:
+        if current%2 == 0:
+            current = current / 2           # current being odd, we divide by 2
+        else:
+            current = (current * 3) + 1     # current is even, multiply by 3 and add 1
+        counter += 1
+    if counter > top:
+        top = counter
+        ans = x                             # keep the longest chain (until now)
+
+print ans                                   # takes some 30 sec to calculate
