@@ -1,0 +1,17 @@
+x = 1
+y = z = total = 2
+
+# Move through fibonacci sequence
+# until sequence reaches 4 million
+# keeping a total of the even-valued terms
+
+while z < 4000001:  
+    z = x + y               # current value is equal to sum of previous two elements
+    if z > 4000000: 
+        break
+    x = y                   # shuffle values around before next iteration
+    y = z
+    if z%2 == 0:            # determine odd/even value and increment if even
+        total = total + z
+
+print "total is %i" % (total)
